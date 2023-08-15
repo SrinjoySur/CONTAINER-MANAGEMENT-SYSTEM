@@ -8,7 +8,7 @@ Input Your Command here:<input id="cmd", name="cmd" />
     function send() {
         Command = document.getElementById("cmd").value;
         const myhttp = new XMLHttpRequest();
-        url="http://8080/cgi-bin/cmd.py?cmd="+Command;
+        url="http://publicip/cgi-bin/cmd.py?cmd="+Command;
         alert(url)
         myhttp.open("GET",url,true)
         myhttp.send();

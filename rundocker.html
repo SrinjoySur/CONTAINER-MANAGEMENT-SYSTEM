@@ -7,7 +7,7 @@ function ajaxInt() {
     document.getElementById("d1").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/run?cname" + cn + "&cimage=" + ci );
+  xhttp.open("GET", "http://publicip:Localhost/run?cname" + cn + "&cimage=" + ci );
   xhttp.send();
 }
 
@@ -17,7 +17,7 @@ function forDockerPs() {
     document.getElementById("d2").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/ps");
+  xhttp.open("GET", "http://publicip:Localhost/ps");
   xhttp.send();
 }
 
@@ -28,7 +28,7 @@ function Dockerdel() {
     document.getElementById("d3").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/del?dcon" + cdel);
+  xhttp.open("GET", "http://publicip:Localhost/del?dcon" + cdel);
   xhttp.send();
 }
 
@@ -39,7 +39,7 @@ function Dockerstop() {
     document.getElementById("d4").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/stop");
+  xhttp.open("GET", "http://publicip:Localhost/stop");
   xhttp.send();
 }
 
@@ -50,7 +50,7 @@ function Dockerstart() {
     document.getElementById("d5").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/start");
+  xhttp.open("GET", "http://publicip:Localhost/start");
   xhttp.send();
 }
 </script>

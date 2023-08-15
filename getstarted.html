@@ -73,7 +73,7 @@ function ajaxInt() {
     document.getElementById("d1").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/run?cname" + cn + "&cimage=" + ci );
+  xhttp.open("GET", "http://publicip:Localhost/run?cname" + cn + "&cimage=" + ci );
   xhttp.send();
 }
 
@@ -94,7 +94,7 @@ function Dockerdel() {
     document.getElementById("d3").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/del?dcon" + cdel);
+  xhttp.open("GET", "http://publicip:Localhost/del?dcon" + cdel);
   xhttp.send();
 }
 
@@ -105,7 +105,7 @@ function Dockerstop() {
     document.getElementById("d4").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/stop");
+  xhttp.open("GET", "http://publicip:Localhost/stop");
   xhttp.send();
 }
 
@@ -116,7 +116,7 @@ function Dockerstart() {
     document.getElementById("d5").innerHTML =
     this.responseText;
   }
-  xhttp.open("GET", "http://8080/start");
+  xhttp.open("GET", "http://publicip:Localhost/start");
   xhttp.send();
 }
 </script>
@@ -195,7 +195,7 @@ Input Your Command here:<input id="cmd", name="cmd" />
     function send() {
         Command = document.getElementById("cmd").value;
         const myhttp = new XMLHttpRequest();
-        url="http://8080/cgi-bin/cmd.py?cmd="+Command;
+        url="http://publicip/cgi-bin/cmd.py?cmd="+Command;
         alert(url)
         myhttp.open("GET",url,true)
         myhttp.send();
